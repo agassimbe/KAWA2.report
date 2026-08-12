@@ -1,0 +1,51 @@
+# Projet de Migration de Données
+
+Ce projet Python permet de manipuler et de migrer des données vers votre base de données en utilisant `pandas`, `SQLAlchemy` et des connecteurs adaptés (PostgreSQL / MySQL).
+
+## Prérequis
+
+* **Python 3** (version recommandée : 3.11 ou supérieure)
+* Un gestionnaire de paquets `pip` à jour
+
+## Installation
+
+1. **Installer Python 3** sur votre machine si ce n'est pas déjà fait.
+2. **Ouvrir une invite de commande** dans le dossier racine du projet.
+3. **Installer les dépendances requises** en lançant la commande :
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## Configuration
+
+1. Dupliquez le fichier de configuration exemple (ou créez un fichier) nommé `.env` à la racine.
+2. **Modifier le fichier `.env`** pour l'adapter à votre propre base de données (hôtes, utilisateur, mot de passe, port, nom de la base).
+
+Exemple de contenu pour le fichier `.env` :
+```env
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=votre_utilisateur
+DB_PASSWORD=votre_mot_de_passe
+DB_NAME=votre_base
+```
+
+## Utilisation
+
+1. **Lancer le script principal** avec la commande :
+   ```bash
+   py main.py
+   ```
+   *(ou `python main.py` selon votre configuration système)*
+
+## Vérification et Dépannage
+
+* **Succès :** Si tout se passe bien, connectez-vous à votre base de données pour vérifier que les données ont correctement été migrées.
+* **Problème / Erreur :** En cas de soucis, veuillez consulter les fichiers de logs générés par l'application pour identifier la source de l'erreur.
+
+## Dépendances du projet (`requirements.txt`)
+* `psycopg2-binary>=2.9.9`
+* `pandas==2.2.3` (et `>=2.2.0`)
+* `sqlalchemy>=2.0.0`
+* `python-dotenv>=1.0.0`
+* `PyMySQL`
